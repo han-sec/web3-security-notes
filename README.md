@@ -1,23 +1,71 @@
-# A quick reference for Web 3 security
+# Web3 Security Notes
 
-## Further Reading
+A comprehensive reference for blockchain security, covering multiple platforms, security findings, and fundamental concepts.
 
-## Ethereum
+## Repository Structure
 
-- [Cypherpunks Ethereum Book](https://cypherpunks-core.github.io/ethereumbook/)
-- [EVM explained](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy)
-- [Zokyo Audit Tutorial](https://zokyo-auditing-tutorials.gitbook.io/zokyo-tutorials/) - a list of all common vulnerabilities
+```text
+web3-security-notes/
+├── blockchain-platforms/      # Blockchain ecosystems
+│   ├── ethereum/             # EVM, Foundry, EIPs/ERCs, L2s
+│   ├── solana/              # Anchor, eBPF, Solana architecture
+│   └── cosmwasm/            # CosmWasm, Cosmos SDK, IBC
+├── programming-languages/     # Language-specific security
+│   ├── solidity/            # Solidity compiler, memory, ABI
+│   └── rust/                # Rust security patterns, REVM
+├── fundamentals/             # Core concepts
+│   ├── cryptography/        # BLS, cryptographic primitives
+│   ├── networking/          # P2P, LibP2P, network protocols
+│   └── node-operations/     # Sequencers, L2 operations
+├── findings/                 # Real-world vulnerabilities
+│   ├── cross-chain/         # Bridge & interop exploits
+│   ├── infrastructure/      # Consensus, network, crypto issues
+│   └── defi/               # DeFi protocol vulnerabilities
+├── tools/                    # Security tools & scripts
+└── resources/               # External learning materials
+```
 
-## Solana
+## Quick Navigation
 
-- [Solana Auditing and Security Resources](https://github.com/sannykim/solsec)
-- [Solana eBPF Virtual Machine](https://www.anza.xyz/blog/the-solana-ebpf-virtual-machine)
+### Blockchain Platforms
 
-### Anchor
+- [Ethereum](blockchain-platforms/ethereum/) - EVM, Foundry, EIPs/ERCs, L2s, protocols
+- [Solana](blockchain-platforms/solana/) - Architecture, Anchor framework, rent mechanism
+- [CosmWasm](blockchain-platforms/cosmwasm/) - Cosmos SDK, entry points, cross-contract messages
 
-- [How to audit Anchor framework](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-4-the-anchor-framework)
-- [Cantina's Solana Smart contract security Guide](https://cantina.xyz/blog/securing-solana-a-developers-guide)
+### Programming Languages
 
-## Cross-chain
+- [Solidity](programming-languages/solidity/) - Compiler, memory structure, ABI encoding, data types
+- [Rust](programming-languages/rust/) - Memory safety, macros, error handling, REVM
 
-- [Blockchain Interoperability Part-1: Interoperability Problem And Bridges](https://themj0ln1r.github.io/writings/blockchain-interoperability-1/)
+### Fundamentals
+
+- [Cryptography](fundamentals/cryptography/) - BLS signatures, cryptographic primitives
+- [Networking](fundamentals/networking/) - P2P protocols, LibP2P, Bitcoin networking
+- [Node Operations](fundamentals/node-operations/) - Sequencers, L2 infrastructure
+
+### Security Findings
+
+- [Cross-Chain](Findings/cross-chain/) - Bridge exploits, relayer vulnerabilities
+- [Infrastructure](Findings/infrastructure/) - Consensus bugs, network attacks
+- [DeFi](Findings/defi/) - Protocol-specific vulnerabilities
+
+### Resources
+
+- [External Resources](resources/external-resources.md) - Curated learning materials
+
+## Getting Started
+
+1. Browse [blockchain-platforms/](blockchain-platforms/) for platform-specific security knowledge
+2. Review [findings/](Findings/) for real-world vulnerability case studies
+3. Study [fundamentals/](fundamentals/) for core security concepts
+4. Check [resources/](resources/) for external learning materials
+
+## Contributing
+
+When adding new content:
+
+- Place platform-specific notes in the appropriate blockchain-platforms folder
+- Document security findings in the findings folder by protocol type
+- Add fundamental concepts to the fundamentals folder
+- Include references and sources where applicable

@@ -14,6 +14,12 @@ Foundry and Cast Cheat Codes
 
 Solidity fundamental guide
 
+### 🏗 [Protocols](Protocols/)
+
+Infrastructure and DeFi protocols
+
+- **[EigenLayer](Protocols/Infrastructure/EigenLayer/)** - Restaking protocol, AVS, operators, slashing
+
 ### Infrastructure
 
 [Patrica Trie](https://medium.com/blockchain-stories/patricia-trie-a-predestined-blockchain-thing-fddeb1a12b0)
