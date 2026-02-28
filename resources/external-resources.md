@@ -13,6 +13,7 @@ A curated list of educational materials, tutorials, and references for Web3 secu
 - [Solana Auditing and Security Resources](https://github.com/sannykim/solsec)
 - [Solana eBPF Virtual Machine](https://www.anza.xyz/blog/the-solana-ebpf-virtual-machine)
 - [Solana Accounts Check](https://substack.com/inbox/post/182231171?utm_source=share&utm_medium=android&r=2w2mon&triedRedirect=true)
+- [Solana Security Checklist](https://www.zealynx.io/resources/checklists/solana/general)
 
 ### Anchor
 
