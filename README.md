@@ -6,42 +6,52 @@ A comprehensive reference for blockchain security, covering multiple platforms, 
 
 ```text
 web3-security-notes/
-├── blockchain-platforms/      # Blockchain ecosystems
-│   ├── ethereum/             # EVM, Foundry, EIPs/ERCs, L2s
-│   ├── solana/              # Anchor, eBPF, Solana architecture
-│   └── cosmwasm/            # CosmWasm, Cosmos SDK, IBC
-├── programming-languages/     # Language-specific security
-│   ├── solidity/            # Solidity compiler, memory, ABI
-│   └── rust/                # Rust security patterns, REVM
-├── fundamentals/             # Core concepts
-│   ├── cryptography/        # BLS, cryptographic primitives
-│   ├── networking/          # P2P, LibP2P, network protocols
-│   └── node-operations/     # Sequencers, L2 operations
-├── findings/                 # Real-world vulnerabilities
-│   ├── cross-chain/         # Bridge & interop exploits
-│   ├── infrastructure/      # Consensus, network, crypto issues
-│   └── defi/               # DeFi protocol vulnerabilities
-├── tools/                    # Security tools & scripts
-└── resources/               # External learning materials
+├── blockchain/                # Blockchain ecosystems
+│   ├── Ethereum/
+│   │   ├── EIPs-and-ERCs/    # Token standards, upgrades, signatures, gas
+│   │   ├── Solidity/
+│   │   │   ├── Language/     # Compiler, memory, ABI encoding, data types
+│   │   │   └── Patterns/     # Access control, common contract patterns
+│   │   ├── Tooling/          # Foundry, IDE audit tools
+│   │   ├── L2/               # Optimism, rollups
+│   │   └── Protocols/        # Uniswap, EigenLayer
+│   ├── Solana/               # Architecture, Anchor, common bugs
+│   └── cosmwasm/             # CosmWasm architecture
+├── programming-languages/     # Cross-chain languages
+│   └── rust/                 # Memory, macros, error handling, REVM
+├── fundamentals/              # Core concepts
+│   ├── cryptography/         # BLS, cryptographic primitives
+│   ├── networking/           # P2P, Bitcoin networking
+│   └── node-operations/      # Sequencers, L2 operations
+├── Findings/                  # Real-world vulnerabilities
+│   ├── cross-chain/          # Bridge & interop exploits
+│   ├── infrastructure/       # Consensus, network, crypto issues
+│   └── defi/                 # DeFi protocol vulnerabilities
+├── resources/                 # External learning materials
+└── tools/                     # Security tools & scripts
 ```
 
 ## Quick Navigation
 
-### Blockchain Platforms
+### Blockchain
 
-- [Ethereum](blockchain-platforms/ethereum/) - EVM, Foundry, EIPs/ERCs, L2s, protocols
-- [Solana](blockchain-platforms/solana/) - Architecture, Anchor framework, rent mechanism
-- [CosmWasm](blockchain-platforms/cosmwasm/) - Cosmos SDK, entry points, cross-contract messages
+- [Ethereum](blockchain/Ethereum/) - EIPs/ERCs, Solidity, Foundry, L2s, protocols
+  - [Solidity Language](blockchain/Ethereum/Solidity/Language/) - Compiler, memory, ABI encoding, data types
+  - [Solidity Patterns](blockchain/Ethereum/Solidity/Patterns/) - OZ access control, common patterns
+  - [EIPs & ERCs](blockchain/Ethereum/EIPs-and-ERCs/) - Token standards, upgrades, signatures
+  - [Tooling](blockchain/Ethereum/Tooling/) - Foundry cheat codes, IDE audit tools
+  - [Protocols](blockchain/Ethereum/Protocols/) - Uniswap V2, EigenLayer
+- [Solana](blockchain/Solana/) - Architecture, Anchor framework, rent, common bugs
+- [CosmWasm](blockchain/cosmwasm/) - CosmWasm architecture
 
 ### Programming Languages
 
-- [Solidity](programming-languages/solidity/) - Compiler, memory structure, ABI encoding, data types
 - [Rust](programming-languages/rust/) - Memory safety, macros, error handling, REVM
 
 ### Fundamentals
 
 - [Cryptography](fundamentals/cryptography/) - BLS signatures, cryptographic primitives
-- [Networking](fundamentals/networking/) - P2P protocols, LibP2P, Bitcoin networking
+- [Networking](fundamentals/networking/) - P2P protocols, Bitcoin networking
 - [Node Operations](fundamentals/node-operations/) - Sequencers, L2 infrastructure
 
 ### Security Findings
@@ -53,19 +63,3 @@ web3-security-notes/
 ### Resources
 
 - [External Resources](resources/external-resources.md) - Curated learning materials
-
-## Getting Started
-
-1. Browse [blockchain-platforms/](blockchain-platforms/) for platform-specific security knowledge
-2. Review [findings/](Findings/) for real-world vulnerability case studies
-3. Study [fundamentals/](fundamentals/) for core security concepts
-4. Check [resources/](resources/) for external learning materials
-
-## Contributing
-
-When adding new content:
-
-- Place platform-specific notes in the appropriate blockchain-platforms folder
-- Document security findings in the findings folder by protocol type
-- Add fundamental concepts to the fundamentals folder
-- Include references and sources where applicable
