@@ -14,7 +14,11 @@ The Beacon Proxy pattern is an upgradeable contract pattern that allows multiple
 
 In the Beacon Proxy pattern, proxy contracts point to a beacon contract instead of directly to an implementation. The beacon contract holds the address of the current implementation. Upgrading the implementation for all proxies is achieved by updating the beacon.
 
-![Screenshot 2024-09-29 at 21.23.44.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f877ee5-fe8c-4def-86e1-42a068da9117/a2376d7f-2ea6-4f67-909e-7fac4f12b4bd/Screenshot_2024-09-29_at_21.23.44.png)
+```
+proxy -> |--------|
+proxy -> | beacon | -> implementation
+proxy -> |________|
+```
 
 ## Technical Details
 

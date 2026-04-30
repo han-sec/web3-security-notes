@@ -1,6 +1,6 @@
 # Transparent Proxy
 
-### Overview:
+### Overview
 
 The Transparent Proxy pattern is an upgradeable contract pattern that addresses function selector clashing between the proxy and implementation contracts. It provides a clear separation between proxy and implementation functionality.
 
@@ -22,6 +22,17 @@ The Transparent Proxy forwards all calls from non-admin addresses to the impleme
 contract TransparentUpgradeableProxy is ERC1967Upgrade {
     address private immutable _admin;
 
+    // keccak256("eip1967.proxy.implementation") - 1
+    bytes32 constant IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
+
+    function _implementation() internal view returns (address impl) {
+        bytes32 slot = IMPLEMENTATION_SLOT;
+        assembly {
+            impl := sload(slot)
+        }
+    }
+
+
     constructor(address _logic, address admin_, bytes memory _data) payable {
         _admin = admin_;
         _upgradeToAndCall(_logic, _data, false);
@@ -31,7 +42,7 @@ contract TransparentUpgradeableProxy is ERC1967Upgrade {
         if (msg.sender == _admin) {
             _;
         } else {
-            _fallback();
+            _fallback(); // <@-- delegate call to implementation
         }
     }
 
@@ -42,7 +53,8 @@ contract TransparentUpgradeableProxy is ERC1967Upgrade {
     function implementation() external ifAdmin returns (address) {
         return _implementation();
     }
-		...
+ 
+    function fallback() external {}
 }
 
 ```
